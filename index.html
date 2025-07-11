@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Pintai</title>
+</head>
+
+<body>
+  <!-- Promo Banner -->
+  <div class="promo">
+    <div>20% OFF your first order</div>
+    <div class="stroke-promo">
+        <div>Try the magic now!</div> 
+        <div class="icon-promo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                <path d="M2.31582 20L0.5 18.225L8.91415 10L0.5 1.775L2.31582 0L12.5458 10L2.31582 20Z" fill="white"/>
+                <path d="M10.2709 20L8.45508 18.225L16.8692 10L8.45508 1.775L10.2709 0L20.5009 10L10.2709 20Z" fill="white"/>
+              </svg>
+        </div>
+    </div>
+  </div>
+
+ <!-- Navbar -->
+<div class="navbar">
+    <div class="nav-links" id="menu">
+        <a href="#" class="small-logo" id="small-logo">
+            <div class="small-1-parth">
+              <svg xmlns="http://www.w3.org/2000/svg" width="37" height="38" viewBox="0 0 37 38" fill="none">
+                <path d="M10.2001 30.25H12.7374C12.8479 30.25 12.9374 30.1605 12.9374 30.05V24.95C12.9374 24.8395 13.027 24.75 13.1374 24.75H19.9375C25.9375 24.75 26.9375 19.25 26.9375 16.75C26.9375 14.25 25.9375 8.75 19.9375 8.75H11.5C10.6716 8.75 10 9.42158 10 10.25L10.0001 30.05C10.0001 30.1605 10.0896 30.25 10.2001 30.25Z" fill="#2A2A2A" stroke="#2A2A2A" stroke-width="0.2754"/>
+                <path d="M12.9375 21.75V11.75H19.9375C23.4375 12.25 23.9375 15.25 23.9375 17.25C23.9375 19.75 22.4375 21.25 19.9375 21.75H12.9375Z" fill="#F6F6F6" stroke="#2A2A2A" stroke-width="0.2754"/>
+                <path d="M11.5 31.75V36.24C11.5 36.2455 11.5045 36.25 11.51 36.25H34.99C34.9955 36.25 35 36.2455 35 36.24V1.76C35 1.75448 34.9955 1.75 34.99 1.75H2.01C2.00448 1.75 2 1.75448 2 1.76V36.24C2 36.2455 2.00448 36.25 2.01 36.25H6.5" stroke="#2A2A2A" stroke-width="3"/>
+              </svg>
+            </div>
+            <div class="int">int</div>
+            <div class="AI">AI</div>
+        </a> 
+        <a href="#gallery" onclick="closeMenu()">Gallery</a>
+        <a href="#create" onclick="closeMenu()">Creating</a>
+        <a href="#instagram" onclick="closeMenu()">Instagram</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <!-- Sections -->
+  <section id=" Immerse yourself into canvas like Van Gogh">
+    <h2>Immerse yourself into canvas like Van Gogh</h2>
+    <p> Immerse yourself into canvas like Van Gogh</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p>Explore beautiful examples of AI-generated Paint-by-Numbers artworks.</p>
+  </section>
+
+  <section id="create">
+    <h2>Creating</h2>
+    <p>Upload your photo or type a prompt to bring your imagination to life.</p>
+  </section>
+
+  <section id="instagram">
+    <h2>Instagram</h2>
+    <p>Follow us for inspiration and customer showcases: <br><a href="https://instagram.com/" target="_blank">@yourhandle</a></p>
+  </section>
+
+  <!-- JS For clickable hanburger icon in mobile version-->
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('menu').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>

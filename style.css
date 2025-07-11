@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+
+  /* Promo Banner (fixed top) */
+  .promo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    font-family: Comme;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 38.4px */
+    z-index: 1002;
+    display: flex;
+     /*here a add code from figma*/
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    align-self: stretch;
+  }
+.stroke-promo{
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.icon-promo{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    
+}
+ /* Navbar */
+.navbar {
+position: fixed;
+top: 40px;
+width: 100%;
+height: 60px;
+background: var(--gray-background, #F6F6F6);
+box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+display: flex;
+justify-content: center; /* Center the links */
+align-items: center;
+z-index: 1001;
+}
+
+.nav-links {
+display: flex;
+gap: 40px;
+align-items: center;
+color: var(--text, #2A2A2A);
+text-align: center;
+font-family: Manrope;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 130%; /* 36.4px */
+letter-spacing: 0.84px;
+}
+
+.nav-links a {
+text-decoration: none;
+color: #555;
+font-weight: 500;
+transition: color 0.3s;
+font-size: 16px;
+}
+
+.nav-links a:hover {
+color: #000;
+}
+.small-logo{
+display: flex;
+padding: 2px;
+align-items: center;
+}
+.small-1-parth{
+width: 33px;
+height: 34.5px;
+}
+.int{
+color: var(--text, #2A2A2A);
+font-family: Manrope;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 130%;
+padding-left: 6px;
+letter-spacing: 2.24px;
+}
+.AI{
+background: linear-gradient(90deg, #2C8AEE 70.99%, #AA8BFA 96.91%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Manrope;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 130%;
+letter-spacing: 1.68px;
+}
+
+/* Hamburger */
+.hamburger {
+display: none;
+font-size: 28px;
+position: absolute;
+right: 20px;
+top: 16px;
+cursor: pointer;
+}
+
+
+  /* Hero Text */
+  .hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 150px 20px 60px;
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  section {
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: center;
+      display: none;
+      padding: 20px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links a {
+      padding: 10px 0;
+      font-size: 18px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .hero-text {
+      font-size: 28px;
+      padding-top: 180px;
+    }
+
+    section h2 {
+      font-size: 26px;
+    }
+  }
