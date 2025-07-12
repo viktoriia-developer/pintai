@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
     background-color: #fff;
     color: #333;
     scroll-behavior: smooth;
@@ -16,29 +15,28 @@ body {
     text-align: center;
     padding: 10px 15px;
     font-family: Comme;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%; /* 38.4px */
     z-index: 1002;
     display: flex;
-     /*here a add code from figma*/
+    /*here a add code from figma*/
     justify-content: center;
     align-items: center;
     gap: 50px;
     align-self: stretch;
   }
-.stroke-promo{
-display: flex;
-align-items: center;
-gap: 8px;
-}
-.icon-promo{
+  .stroke-promo{
+    display: flex;
+    gap: 8px;
+  }
+  .icon-promo{
     width: 20px;
     height: 20px;
     flex-shrink: 0;
-    
-}
+    align-items: center;
+    text-align: center;
+  }
  /* Navbar */
 .navbar {
 position: fixed;
@@ -52,17 +50,15 @@ justify-content: center; /* Center the links */
 align-items: center;
 z-index: 1001;
 }
-
 .nav-links {
 display: flex;
 gap: 40px;
 align-items: center;
 color: var(--text, #2A2A2A);
 text-align: center;
-font-family: Manrope;
-font-size: 28px;
+font-size: 20px;
 font-style: normal;
-font-weight: 700;
+font-weight: 400;
 line-height: 130%; /* 36.4px */
 letter-spacing: 0.84px;
 }
@@ -70,9 +66,13 @@ letter-spacing: 0.84px;
 .nav-links a {
 text-decoration: none;
 color: #555;
-font-weight: 500;
+font-family: Manrope;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 36.4px */
+letter-spacing: 0.84px;
 transition: color 0.3s;
-font-size: 16px;
 }
 
 .nav-links a:hover {
@@ -89,7 +89,6 @@ height: 34.5px;
 }
 .int{
 color: var(--text, #2A2A2A);
-font-family: Manrope;
 font-size: 28px;
 font-style: normal;
 font-weight: 600;
@@ -120,30 +119,119 @@ top: 16px;
 cursor: pointer;
 }
 
-
-  /* Hero Text */
-  .hero-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 150px 20px 60px;
-    font-size: 36px;
-    font-weight: 600;
-  }
-
   section {
     padding: 100px 20px;
     text-align: center;
   }
-
+  .first-section{
+    height: 1300px;
+    padding: 190px;
+    align-self:flex-end
+    background: var(--white-background, #FFF);
+  }
+  .first-column-1-section{
+    display: flex;
+    padding-left: 190px;
+    padding-right: 190px;
+    padding-top: 100px;
+    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-end; 
+  }
+  .first-stroke-1-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    color: var(--text, #2A2A2A);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 52px */
+    letter-spacing: 1.6px;
+  }
+  .gradient-text{
+    -webkit-line-clamp: 5;
+    background: linear-gradient(90deg, #2C8AEE 19.3%, #AA8BFA 40.82%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Manrope;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 1.92px;
+  }
+  .van-gogh{
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    color: var(--text, #2A2A2A);
+    font-family: Manrope;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 1.92px;
+  }
+  .second-stroke-1-section{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Manrope;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 84.5px */
+    letter-spacing: 2.6px;
+    background: var(--3, linear-gradient(90deg, #2C8AEE 0%, #AA8BFA 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .third-stroke-1-section{
+    display: flex;
+    width: 271px;
+    height: 91px;
+    align-items: center;
+  }
+    .big-1-parth{
+      width: 76px;
+      height: 80px;
+      flex-shrink: 0;
+    }
+    .big-int{
+      color: var(--text, #2A2A2A);
+      font-family: Manrope;
+      font-size: 70px;
+      font-style: normal;
+      font-weight: 600;
+      padding-left: 12px;
+      line-height: 130%;
+      letter-spacing: 4.2px;
+    }
+    .big-AI{
+      background: linear-gradient(90deg, #2C8AEE 69.4%, #AA8BFA 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: Manrope;
+      font-size: 70px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%;
+      letter-spacing: 4.2px;
+    }
   section h2 {
     font-size: 32px;
     margin-bottom: 20px;
     color: #444;
   }
 
-  /* Mobile Responsive */
+  /* Mobile Responsive */ /*here i must add specific changes for adaptives*/
   @media (max-width: 768px) {
     .nav-links {
       position: absolute;
@@ -171,12 +259,109 @@ cursor: pointer;
       display: block;
     }
 
-    .hero-text {
-      font-size: 28px;
-      padding-top: 180px;
-    }
-
     section h2 {
       font-size: 26px;
     }
+    /*here i added improvization with 1 section*/
+    .first-section{
+      height: 1300px;
+      align-self:flex-end;
+      background: var(--white-background, #FFF);
+    }
+    .first-column-1-section{
+      display: flex;
+      padding-left: 190px;
+      padding-right: 190px;
+      padding-top: 100px;
+      align-items: flex-end;
+      flex-direction: column;
+      align-items: flex-end; 
+    }
+    .first-stroke-1-section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 10px;
+      color: var(--text, #2A2A2A);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 52px */
+      letter-spacing: 1.6px;
+    }
+    .gradient-text{
+      -webkit-line-clamp: 5;
+      background: linear-gradient(90deg, #2C8AEE 19.3%, #AA8BFA 40.82%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: Manrope;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: 1.92px;
+    }
+    .van-gogh{
+      overflow: hidden;
+      -webkit-line-clamp: 5;
+      color: var(--text, #2A2A2A);
+      font-family: Manrope;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: 1.92px;
+    }
+    .second-stroke-1-section{
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: Manrope;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%; /* 84.5px */
+      letter-spacing: 2.6px;
+      background: var(--3, linear-gradient(90deg, #2C8AEE 0%, #AA8BFA 100%));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .third-stroke-1-section{
+      display: flex;
+      width: 271px;
+      height: 91px;
+      align-items: center;
+    }
+      .big-1-parth{
+        width: 76px;
+        height: 80px;
+        flex-shrink: 0;
+      }
+      .big-int{
+        color: var(--text, #2A2A2A);
+        font-family: Manrope;
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 600;
+        padding-left: 12px;
+        line-height: 130%;
+        letter-spacing: 4.2px;
+      }
+      .big-AI{
+        background: linear-gradient(90deg, #2C8AEE 69.4%, #AA8BFA 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: Manrope;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 4.2px;
+      }
   }
