@@ -1,53 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    background-color: #fff;
-    color: #333;
-    scroll-behavior: smooth;
-    font-family: "Manrope", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  }
-html{
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+  scroll-behavior: smooth;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+html {
   scroll-behavior: smooth;
 }
-a,.btn{
-  transition: all 300ms ease;
-}
-p{
+
+p {
   color: #333;
 }
-/*Desktop nav*/
-nav,.nav-links{
+
+/*Transition*/
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/*Dekstop nav*/
+nav,
+.nav-links {
   display: flex;
 }
-nav{
+nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
 }
-.nav-links{
+.nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
 }
-a{
+a {
   color: #333;
   text-decoration: none;
   text-decoration-color: white;
 }
-a:hover{
+a:hover {
   color: gray;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181)
+  text-decoration-color: rgb(181, 181, 181);
 }
-.logo{
+.logo {
   font-size: 2rem;
 }
-.logo:hover{
+
+.logo:hover {
   cursor: default;
 }
 

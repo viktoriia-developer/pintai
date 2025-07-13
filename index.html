@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaqueries.css">
-  <link rel="stylesheet" href="script.js">
   <title>Pintai</title>
 </head>
 
@@ -45,31 +45,31 @@
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>   -->
   <!--Navbar new from youtube-->
-<nav id="desktop-nav">
-  <div class="logo">John Doe</div>
-  <div>
-    <ul class="nav-links">
-      <li><a href="#gallery_of_pictures">Gallery of pictures</a></li>
-      <li><a href="#our_instagram">Our Instagram</a></li>
-      <li><a href="#creating">Creating</a></li>
-    </ul>
-  </div>
-</nav>
-<nav id="hamburger-nav">
-  <div class="logo">John Doe</div>
-  <div class="hamburger-menu">
-    <div class="hamburger-icon" onclick="toggleMenu">
-      <span></span>
-      <span></span>
-      <span></span>
+  <nav id="dekstop-nav">
+    <div class="logo">John Doe</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#gallery_of_pictures">Gallery of pictures</a></li>
+        <li><a href="#our_instagram">Our Instagram</a></li>
+        <li><a href="#creating">Creating</a></li>
+      </ul>
     </div>
-    <div class="menu-links">
-      <li><a href="#gallery_of_pictures" onclick="toggleMenu">Gallery of pictures</a></li>
-      <li><a href="#our_instagram" onclick="toggleMenu">Our Instagram</a></li>
-      <li><a href="#creating" onclick="toggleMenu">Creating</a></li>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">John Doe</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick= "toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#gallery_of_pictures" onclick="toggleMenu">Gallery of pictures</a></li>
+        <li><a href="#our_instagram" onclick="toggleMenu">Our Instagram</a></li>
+        <li><a href="#creating" onclick="toggleMenu">Creating</a></li>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 
   <!-- Sections -->
@@ -117,7 +117,7 @@
   </section>
 
   <!-- JS For clickable hanburger icon in mobile version--> <!--
-  <script>
+  <script> from chat gpt
     function toggleMenu() {
       document.getElementById('menu').classList.toggle('active');
     }
@@ -125,7 +125,7 @@
     function closeMenu() {
       document.getElementById('menu').classList.remove('active');
     }
-  </script>  -->
-
+  </script>  --> 
+ <script src="script.js"></script>
 </body>
 </html>
