@@ -9,8 +9,9 @@
   <title>Pintai</title>
 </head>
 
-<body>
-  <!-- Promo Banner -->  <!--
+
+  <header>
+     <!-- Promo Banner -->
   <div class="promo">
     <div>20% OFF your first order</div>
     <div class="stroke-promo">
@@ -22,77 +23,29 @@
               </svg>
         </div>
     </div>
-  </div> -->
-
- <!-- Navbar --> <!--
-<div class="navbar">
-    <div class="nav-links" id="menu">
-        <a href="#" class="small-logo" id="small-logo">
-            <div class="small-1-parth">
-              <svg xmlns="http://www.w3.org/2000/svg" width="37" height="38" viewBox="0 0 37 38" fill="none">
-                <path d="M10.2001 30.25H12.7374C12.8479 30.25 12.9374 30.1605 12.9374 30.05V24.95C12.9374 24.8395 13.027 24.75 13.1374 24.75H19.9375C25.9375 24.75 26.9375 19.25 26.9375 16.75C26.9375 14.25 25.9375 8.75 19.9375 8.75H11.5C10.6716 8.75 10 9.42158 10 10.25L10.0001 30.05C10.0001 30.1605 10.0896 30.25 10.2001 30.25Z" fill="#2A2A2A" stroke="#2A2A2A" stroke-width="0.2754"/>
-                <path d="M12.9375 21.75V11.75H19.9375C23.4375 12.25 23.9375 15.25 23.9375 17.25C23.9375 19.75 22.4375 21.25 19.9375 21.75H12.9375Z" fill="#F6F6F6" stroke="#2A2A2A" stroke-width="0.2754"/>
-                <path d="M11.5 31.75V36.24C11.5 36.2455 11.5045 36.25 11.51 36.25H34.99C34.9955 36.25 35 36.2455 35 36.24V1.76C35 1.75448 34.9955 1.75 34.99 1.75H2.01C2.00448 1.75 2 1.75448 2 1.76V36.24C2 36.2455 2.00448 36.25 2.01 36.25H6.5" stroke="#2A2A2A" stroke-width="3"/>
-              </svg>
-            </div>
-            <div class="int">int</div>
-            <div class="AI">AI</div>
-        </a> 
-        <a href="#gallery" onclick="closeMenu()">Gallery</a>
-        <a href="#create" onclick="closeMenu()">Creating</a>
-        <a href="#instagram" onclick="closeMenu()">Instagram</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-  </div>   -->
-  <!--Navbar new from youtube-->
-  <header>
-    <div class="navbar">
-      <div class="logo"><a href="#">Web Dev Creative</a></div>
-      <ul class="links">
-        <li><a href="hero">Home</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="services">Services</a></li>
-        <li><a href="contact">Contact</a></li>
-      </ul>
-      <a href="#" class="action_btn">Get Started</a>
-      <div class="toggle_btn">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </div>
-
-    <div class="dropdown_menu">
+  </div>
+  <div class="navbar">
+    <div class="logo"><a href="#">Web Dev Creative</a></div>
+    <ul class="links">
       <li><a href="hero">Home</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="services">Services</a></li>
-        <li><a href="contact">Contact</a></li>
-        <li><a href="#" class="action_btn">Get Started</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="services">Services</a></li>
+      <li><a href="contact">Contact</a></li>
+    </ul>
+    <a href="#" class="action_btn">Get Started</a>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
     </div>
+  </div>
+
+  <div class="dropdown_menu">
+    <li><a href="hero">Home</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="services">Services</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li><a href="#" class="action_btn">Get Started</a></li>
+  </div>
   </header>
-  <!--<nav id="dekstop-nav">
-    <div class="logo">John Doe</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#instagram">Instagram</a></li>
-        <li><a href="#creating">Creating</a></li>
-      </ul>
-    </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">John Doe</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick= "toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#gallery" onclick="toggleMenu">Gallery</a></li>
-        <li><a href="#instagram" onclick="toggleMenu">Instagram</a></li>
-        <li><a href="#creating" onclick="toggleMenu">Creating</a></li>
-      </div>
-    </div>
-  </nav>
 
 
   <!-- Sections -->
@@ -147,16 +100,6 @@
    </main>
   
 
-  <!-- JS For clickable hanburger icon in mobile version--> <!--
-  <script> from chat gpt
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('active');
-    }
-
-    function closeMenu() {
-      document.getElementById('menu').classList.remove('active');
-    }
-  </script>  --> 
  <script>
   const toggleBtn = document.querySelector('.toggle_btn')
   const toggleBtnIcon = document.querySelector('.toggle_btn i')
