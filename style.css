@@ -257,6 +257,10 @@ section#hero {
     width: 186px;
     height: auto;
   }
+  .logo {
+    width: 180px;
+    height: auto;
+  }
 
 /*RESPONSIVE DESIGN*/
 
@@ -285,23 +289,27 @@ section#hero {
     font-size: 12px;
   }
   p {
-    font-size: 1.6rem;
-    font-weight:300;
+    font-size: 1.4rem;
+    font-weight:400;
     letter-spacing: 1.2px;
   }
   .gradient-text{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing: 1.2px;
   }
   .van-gogh{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing: 1.2px;
   }
   .second-stroke-1-section{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing: 1.2px;
   }
   .responsive-logo {
     width: 20px;
+  }
+  .logo {
+    content: url('small_logo.svg'); /* swap logo file */
+    width: 100px;
   }
 }
