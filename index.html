@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
+  <!-- Swiper CSS -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
   <title>Pintai</title>
 </head>
-
 
   <header>
      <!-- Promo Banner -->
@@ -49,7 +52,6 @@
       <i class="fa-solid fa-bars"></i>
     </div>
   </div>
-
   <div class="dropdown_menu">
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#instagram">Instagram</a></li>
@@ -58,23 +60,40 @@
   </div>
   </header>
 
-
   <!-- Sections -->
    <main>
     <section id=" hero">
-      <p>
-        Immerse <span class="gradient-text">yourself</span>
-        into canvas like <span class="van-gogh">Van Gogh</span><span class="second-stroke-1-section">AI Paint-by-Numbers</span>
-        <img class="logo" src="logo new big.svg" alt="Logo" />
-
-          
-      </p>
-  
+      <div class="hero">
+        <p>
+          Immerse <span class="gradient-text">yourself</span>
+          into canvas like <span class="van-gogh">Van Gogh</span><span class="second-stroke-1-section">AI Paint-by-Numbers</span>
+          <img class="logo" src="logo new big.svg" alt="Logo" />
+        </p>
+      </div>
     </section>
   
-    <section id="gallery">
+    <section id="gallery"><span class="galerry">
       <h2>Gallery</h2>
-      <p>Explore beautiful examples of AI-generated Paint-by-Numbers artworks.</p>
+      <!-- Swiper -->
+      <!-- Swiper container -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="field-prompt">Happy couple in cafe <svg xmlns="http://www.w3.org/2000/svg" width="2" height="34" viewBox="0 0 2 34" fill="none">
+        <path d="M1 1L1 33" stroke="#2A2A2A" stroke-width="2" stroke-linecap="round"/>
+      </svg> <div class="icon-copy"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <path d="M9.89844 17.0961C9.89844 13.0068 9.89844 10.9621 11.1637 9.69177C12.429 8.42139 14.4655 8.42139 18.5384 8.42139H22.8584C26.9314 8.42139 28.9678 8.42139 30.2331 9.69177C31.4984 10.9621 31.4984 13.0068 31.4984 17.0961V24.325C31.4984 28.4143 31.4984 30.4589 30.2331 31.7293C28.9678 32.9997 26.9314 32.9997 22.8584 32.9997H18.5384C14.4655 32.9997 12.429 32.9997 11.1637 31.7293C9.89844 30.4589 9.89844 28.4143 9.89844 24.325V17.0961Z" fill="#575757"/>
+        <path opacity="0.5" d="M6.25736 4.75736C4.5 6.51472 4.5 9.34315 4.5 15V18C4.5 23.6569 4.5 26.4853 6.25736 28.2427C7.1837 29.169 8.40764 29.607 10.1866 29.8142C9.89942 28.553 9.89941 26.8194 9.89941 24.325V17.0961C9.89941 13.0068 9.89941 10.9622 11.1647 9.69177C12.43 8.42139 14.4665 8.42139 18.5394 8.42139H22.8594C25.3372 8.42139 27.0613 8.42139 28.3166 8.70741C28.1104 6.91719 27.6726 5.68731 26.7426 4.75736C24.9853 3 22.1569 3 16.5 3C10.8431 3 8.01472 3 6.25736 4.75736Z" fill="#575757"/>
+      </svg></div></div>
+      <div class="swiper-slide"><img src="image/1.jpg" alt="">Slide 1</div>
+      <div class="swiper-slide"><img src="image/2.jpg" alt="">Slide 2</div>
+      <div class="swiper-slide"><img src="image/3.jpg" alt="">Slide 3</div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+    </span>
     </section>
   
     <section id="instagram">
@@ -104,5 +123,21 @@ const toggleBtn = document.querySelector('.toggle_btn')
   toggleBtnIcon.classList.add(isOpen ? 'fa-xmark' : 'fa-bars')
  }
 </script> 
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Swiper initialization -->
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    speed: 600,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    effect: "slide", // can be "fade", "cube", "coverflow", "flip"
+  });
+</script>
 </body>
 </html>
