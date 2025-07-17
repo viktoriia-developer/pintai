@@ -89,9 +89,45 @@
       <p>Upload your photo or type a prompt to bring your imagination to life.</p>
     </section>
   
-    <section id="creating">
+    <section id="creating"><span class="creating">
       <h2>Creating</h2>
-      <p>Follow us for inspiration and customer showcases: <br><a href="https://instagram.com/" target="_blank">@yourhandle</a></p>
+      <h1>Select a picture</h1>
+      <span class="text">Turn your photo into a breathtaking <span class="ai-text">AI-generated</span> artwork<br>made for you to bring to life with paint</span>
+    <!-- Third Swiper -->
+      <div class="my-third-swiper-container">
+        <div class="my-third-swiper-wrapper">
+          <div class="my-third-swiper-slide">
+            <div class="image-container">
+              <div class="frame-tariff-photo"><img src="image/7.svg" alt=""></div>
+              <div class="overlay-text">Magic Mirror</div>
+              <div class="second-frame-tariff">
+                <div class="first-description">
+                  <div class="third-column-tariff">
+                    <div class="two-column-tariff">
+                      <div class="one-stroke-description">
+                        <img src="image/icon photo.svg" alt="">Upload your photo
+                      </div>
+                      <div class="one-stroke-description">
+                        <img src="image/icon keyboard.svg" alt="">Add a creative prompt
+                      </div>
+                    </div>
+                    <div class="advise">
+                      Perfect for people & pets — with a dreamy twist
+                    </div>
+                  </div>
+                  <div class="price">
+                    16 900 <img src="image/currency_pound_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 (1) 1.svg" alt="">
+                  </div>
+                  <div class="btn-tariff">Choose</div>
+                </div>
+              </div>
+            </div>
+            </div>
+          <div class="my-third-swiper-slide">Slide 2</div>
+          <div class="my-third-swiper-slide">Slide 3</div>
+        </div>
+      </div>
+    </span>
     </section>
    </main>
   
@@ -126,6 +162,37 @@ const toggleBtn = document.querySelector('.toggle_btn')
     },
     effect: "slide", // can be "fade", "cube", "coverflow", "flip"
   });
+</script>
+
+<!--ThirdSwiper-->
+<script>
+  let thirdSwiper;
+
+  function initThirdSwiper() {
+    const isMobile = window.innerWidth <= 576;
+
+    // Destroy old instance if it exists
+    if (thirdSwiper) thirdSwiper.destroy(true, true);
+
+    thirdSwiper = new Swiper(".my-third-swiper-container", {
+      slidesPerView: isMobile ? 1.5 : 3,
+      spaceBetween: 20,
+      loop: isMobile,
+      allowTouchMove: isMobile,
+      autoplay: isMobile
+        ? {
+            delay: 2500,
+            disableOnInteraction: false,
+          }
+        : false,
+      // Rename Swiper element classes to match our custom structure
+      wrapperClass: "my-third-swiper-wrapper",
+      slideClass: "my-third-swiper-slide",
+    });
+  }
+
+  window.addEventListener("load", initThirdSwiper);
+  window.addEventListener("resize", initThirdSwiper);
 </script>
 </body>
 </html>

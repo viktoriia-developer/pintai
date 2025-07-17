@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Swiper Autoplay Mobile</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+
+    .swiper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .swiper-slide {
+      background-color: #333;
+      color: white;
+      height: 200px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    let swiper;
+
+    function initSwiper() {
+      const isMobile = window.innerWidth <= 576;
+
+      if (swiper) swiper.destroy(true, true); // Reset if already exists
+
+      swiper = new Swiper(".mySwiper", {
+        slidesPerView: isMobile ? 1.5 : 3,
+        spaceBetween: isMobile ? 16 : 20,
+        loop: isMobile, // loop only on mobile
+        allowTouchMove: isMobile, // only swipeable on mobile
+        autoplay: isMobile ? {
+          delay: 2500,
+          disableOnInteraction: false
+        } : false
+      });
+    }
+
+    // Init on load
+    window.addEventListener("load", initSwiper);
+
+    // Re-init on resize
+    window.addEventListener("resize", () => {
+      initSwiper();
+    });
+  </script>
+
+</body>
+</html>

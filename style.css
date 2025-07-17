@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -204,10 +203,6 @@ section#hero {
     align-items: center;
     text-align: center;
   }
-
-  section {
-    text-align: center;
-  }
   .first-section{
     height: 1300px;
     padding: 190px;
@@ -333,6 +328,204 @@ section#hero {
   .icon-copy {
     padding-left: 10px;
   }
+
+  .my-third-swiper-container {
+    overflow: hidden;
+    padding-right: 40px;
+    width: 100%;
+    gap: 50px;
+  }
+  .image-container {
+    gap: 12px;
+  }
+
+  .my-third-swiper-wrapper {
+    padding-right: 20px;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .my-third-swiper-slide {
+    min-width: calc(100% / 3);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    border: 2px solid var(--blue, #2E8AEE);
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  .frame-tariff-photo img {
+    width: 100%;
+    height: auto;
+    max-width: 480px;
+    max-height: 552px;
+    object-fit: cover;
+    border-radius: 8px;
+    border-radius: 30px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  }
+
+  .second-frame-tariff {
+    display: flex;
+    padding: 0px 30px 30px 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .first-description {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+  .overlay-text {
+    color:#FFF;
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 36.4px */
+    letter-spacing: 1.12px;
+    transform: translate(0%, -200%);
+    color: white;
+    text-align: center;
+  }
+  .third-column-tariff {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .two-column-tariff {
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .one-stroke-description {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    color: var(--text, #2A2A2A);
+  }
+
+.advise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: var(--light-text, #575757);
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+  letter-spacing: 0.72px;
+  height: 42px;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+  .price {
+    display: flex;
+    padding: 3.361px 0px 4.482px 4.482px;
+    justify-content: center;
+    align-items: center;
+    background: var(--3, linear-gradient(90deg, #2C8AEE 0%, #AA8BFA 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Manrope;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 39px */
+    letter-spacing: 0.9px;
+
+  }
+  .btn-tariff {
+    display: flex;
+    padding: 18px 16px 20px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    align-self: stretch;
+    border-radius: 24px;
+    border: 1px solid var(--blue, #2E8AEE);
+    background: var(--blue, #2E8AEE);
+    color: var(--white-background, #FFF);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 36.4px */
+    letter-spacing: 1.12px;
+  }
+  .creating {
+    display: flex;
+    padding: 80px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    align-self: stretch;
+    background: var(--gray-background, #F6F6F6);
+  }
+  .text {
+    overflow: hidden;
+    color: var(--text, #2A2A2A);
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 46.8px */
+    letter-spacing: 1.44px;
+  }
+
+  .ai-text {
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    background: linear-gradient(90deg, #2C8AEE 58.34%, #AA8BFA 74.03%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-overflow: ellipsis;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 1.44px;
+  }
+h1 {
+  overflow: hidden;
+  color: var(--pink, #A88BFA);
+  text-overflow: ellipsis;
+  font-family: Manrope;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 52px */
+  letter-spacing: 1.6px;
+}
   
 /*RESPONSIVE DESIGN*/
 
@@ -345,8 +538,21 @@ section#hero {
     display: block;
   }
 
+  .one-stroke-description {
+    font-size: 20px;
+  }
+
   .dropdown_menu {
     display: block;
+  }
+  .advise {
+    font-size: 20px;
+  }
+  .price {
+    font-size: 24px;
+  }
+  .overlay-text {
+    font-size: 24px;
   }
 }
 
@@ -354,6 +560,18 @@ section#hero {
   .dropdown_menu {
     left: 2rem;
     width: unset;
+  }
+  .one-stroke-description {
+    font-size: 16px;
+  }
+  .advise {
+    font-size: 14px;
+  }
+  .price {
+    font-size: 20px;
+  }
+  .overlay-text {
+    font-size: 20px;
   }
   .promo {
     padding-top: 2px;
@@ -383,5 +601,35 @@ section#hero {
   .logo {
     content: url('small_logo.svg'); /* swap logo file */
     width: 100px;
+  }
+  .my-third-swiper-slide {
+    min-width: 66.666%; /* 1.5 slides visible */
+  }
+  .frame-tariff-photo img {
+    width: 100%;
+    height: auto;
+    max-width: 480px;
+    max-height: 280px;
+  }
+  .btn-tariff {
+    display: flex;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    border-radius: 14px;
+    border: 1px solid var(--blue, #2E8AEE);
+    background: var(--blue, #2E8AEE);
+    color: var(--white-background, #FFF);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 36.4px */
+    letter-spacing: 0.12px;
   }
 }
