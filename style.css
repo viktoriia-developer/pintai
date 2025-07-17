@@ -528,6 +528,18 @@ h1 {
 }
   
 /*RESPONSIVE DESIGN*/
+@media (max-width: 1200px) {
+  .two-column-tariff {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 6px;
+  }
+  .advise {
+    padding-bottom: 20px;
+  }
+  
+}
+
 
 @media (max-width: 992px) {
   .navbar .links,
@@ -537,22 +549,71 @@ h1 {
   .navbar .toggle_btn {
     display: block;
   }
-
   .one-stroke-description {
-    font-size: 20px;
+    font-size: 18px;
+    gap: 14px;
   }
 
   .dropdown_menu {
     display: block;
   }
   .advise {
-    font-size: 20px;
+    font-size: 18px;
+    padding-bottom: 20px;
   }
   .price {
-    font-size: 24px;
+    font-size: 20px;
   }
   .overlay-text {
-    font-size: 24px;
+    font-size: 20px;
+  }
+  .third-column-tariff {
+    gap: 14px;
+  }
+  .two-column-tariff {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .frame-tariff-photo img {
+    width: 100%;
+    height: auto;
+    max-width: 480px;
+    max-height: 480px;
+  }
+  .two-column-tariff {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 6px;
+  }
+  .third-column-tariff {
+    gap: 12px;
+  }
+  .btn-tariff {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    gap: 4px;
+    border-radius: 14px;
+    font-size: 16px;
+  }
+  .one-stroke-description {
+    font-size: 16px;
+    gap: 10px;
+  }
+  .advise {
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+  .price {
+    font-size: 22px;
+  }
+  .overlay-text {
+    font-size: 22px;
   }
 }
 
@@ -563,9 +624,18 @@ h1 {
   }
   .one-stroke-description {
     font-size: 16px;
+    gap: 8px;
+  }
+  .third-column-tariff {
+    gap: 10px;
   }
   .advise {
     font-size: 14px;
+    padding-bottom: 20px;
+  }
+  .two-column-tariff {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .price {
     font-size: 20px;
@@ -612,24 +682,30 @@ h1 {
     max-height: 280px;
   }
   .btn-tariff {
-    display: flex;
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 4px;
     padding-bottom: 6px;
-    justify-content: center;
-    align-items: center;
     gap: 4px;
-    align-self: stretch;
     border-radius: 14px;
-    border: 1px solid var(--blue, #2E8AEE);
-    background: var(--blue, #2E8AEE);
-    color: var(--white-background, #FFF);
-    font-family: Manrope;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%; /* 36.4px */
-    letter-spacing: 0.12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .third-column-tariff {
+    gap: 8px;
+  }
+  .two-column-tariff {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .one-stroke-description {
+    font-size: 16px;
+    gap: 4px;
+  }
+  .advise {
+    font-size: 14px;
+    padding-bottom: 20px;
   }
 }
