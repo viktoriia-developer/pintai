@@ -161,9 +161,6 @@ section#hero {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-.hero {
-  padding-top: 100px;
-}
 
   /* Promo Banner (fixed top) */
   .promo {
@@ -200,12 +197,6 @@ section#hero {
     flex-shrink: 0;
     align-items: center;
     text-align: center;
-  }
-  .first-section{
-    height: 1300px;
-    padding: 190px;
-    align-self:flex-end;
-    background: var(--white-background, #FFF);
   }
 
   .gradient-text{
@@ -248,10 +239,6 @@ section#hero {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  .responsive-logo{
-    width: 186px;
-    height: auto;
   }
   .logo {
     width: 180px;
@@ -326,33 +313,6 @@ section#hero {
     padding-left: 10px;
   }
 
-  .my-third-swiper-container {
-    overflow: hidden;
-    padding-right: 40px;
-    width: 100%;
-    gap: 50px;
-  }
-  .image-container {
-    gap: 12px;
-  }
-
-  .my-third-swiper-wrapper {
-    padding-right: 20px;
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-
-  .my-third-swiper-slide {
-    min-width: calc(100% / 3);
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    border-radius: 30px;
-    border: 2px solid var(--blue, #2E8AEE);
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-  }
   .frame-tariff-photo img {
     width: 100%;
     height: auto;
@@ -394,6 +354,7 @@ section#hero {
     color: white;
     text-align: center;
   }
+  
   .third-column-tariff {
     display: flex;
     min-height: 156px;
@@ -438,7 +399,38 @@ section#hero {
   align-items: flex-start;
   flex-shrink: 0;
 }
+.yourself {
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  color: var(--text, #2A2A2A);
+  text-overflow: ellipsis;
+  font-family: Manrope;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 1.52px;
+}
 
+.description-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: var(--light-text, #575757);
+  font-family: Manrope;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+  letter-spacing: 0.72px;
+  flex-direction: column;
+  flex: 1 0 0;
+  align-items: center;
+  flex-shrink: 0;
+}
   .price {
     display: flex;
     padding-top: 20px;
@@ -526,6 +518,8 @@ h1 {
   line-height: 130%; /* 52px */
   letter-spacing: 1.6px;
 }
+
+
   
 /*RESPONSIVE DESIGN*/
 
@@ -581,7 +575,6 @@ h1 {
     gap: 12px;
   }
   .btn-tariff {
-   
     gap: 4px;
     border-radius: 14px;
     font-size: 16px;
@@ -708,6 +701,9 @@ h1 {
   .slide-container {
     grid-template-columns: repeat(3, 1fr);
   }
+  .first-slide-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* 576px–991px: 2 in first row, 1 below */
@@ -715,11 +711,17 @@ h1 {
   .slide-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .first-slide-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* < 576px: 1 column */
 @media (max-width: 575px) {
   .slide-container {
+    grid-template-columns: 1fr;
+  }
+  .first-slide-container {
     grid-template-columns: 1fr;
   }
   .btn-tariff {
