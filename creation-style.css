@@ -69,7 +69,6 @@ section {
   }
   .third-column-tariff {
     display: flex;
-    min-height: 156px;
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
@@ -85,18 +84,17 @@ section {
   .one-stroke-description {
     display: flex;
     align-items: center;
+    font-size: 24px;
     gap: 16px;
     align-self: stretch; 
   }
   .advise {
     display: flex;
-    min-height: 38px;
-    max-height: 72px;
     gap: 10px;
     align-self: stretch;
     color: var(--light-text, #575757);
     font-family: Manrope;
-    font-size: 18px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 23.4px */
@@ -116,7 +114,7 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: Manrope;
-    font-size: 30px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: 130%; /* 39px */
@@ -134,7 +132,7 @@ section {
     background: var(--blue, #2E8AEE);
     color: var(--white-background, #FFF);
     font-family: Manrope;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 130%; /* 36.4px */
@@ -142,81 +140,42 @@ section {
   }
  
   /*RESPONSIVE DESIGN*/
-  @media (max-width: 1920px) {
-    .section {
-        max-width: 1920px;
-    }
-    .creating {
-     max-width: 1920px;
-    }
+  
+/* ≥ 992px: 3 slides in 1 row */
+@media (min-width: 992px) {
     .slide-container {
-        max-width: 1760px;
+        grid-template-columns: repeat(3, 1fr);
     }
-  }
-  
-  @media (max-width: 1200px) {
-    .two-column-tariff {
-      gap: 6px;
+    .first-slide-container {
+        grid-template-columns: repeat(3, 1fr);
     }
-  }
-  
-  @media (max-width: 992px) {
-    .one-stroke-description {
-      font-size: 18px;
-      gap: 14px;
+}
+
+/* 576px–991px: 2 in first row, 1 below */
+@media (min-width: 576px) and (max-width: 991px) {
+    .slide-container {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .price {
-      font-size: 24px;
-    }
-    .third-column-tariff {
-      gap: 14px;
-    }
-    .two-column-tariff {
-      gap: 6px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .frame-tariff-photo img {
-      width: 100%;
-      height: auto;
-      max-width: 480px;
-      max-height: 480px;
-    }
-    .two-column-tariff {
-      gap: 6px;
-    }
-    .third-column-tariff {
-      gap: 12px;
-    }
-    .btn-tariff {
-      gap: 4px;
-      border-radius: 14px;
-      font-size: 16px;
-    }
-    .one-stroke-description {
-      font-size: 16px;
-      gap: 10px;
-    }
-    .advise {
-      font-size: 16px;
+    .first-slide-container {
+        grid-template-columns: repeat(2, 1fr);
     }
     .price {
-      font-size: 24px;
+        padding-top: 4px;
+        padding-bottom: px;
     }
-  }
-  /* i checked it.Done */
-  @media (max-width: 576px) {
+}
+      
+/* i checked it.Done */
+@media (max-width: 576px) {
     .one-stroke-description {
-      gap: 16px;
-      font-size: 20px;
+        gap: 16px;
+        font-size: 20px;
     }
     .third-column-tariff {
         gap: 10px;
-        min-height: 0px;
         padding: 0px;
-      }
-    
+        }
+
     .first-slide-container {
         grid-template-columns: 1fr;
     }
@@ -225,72 +184,26 @@ section {
         gap: 6px;
     }
     .advise {
-      padding: 0px;
-      max-height: 28px;
-      gap: 10px;
-      font-size: 18px;
+        padding: 0px;
+        gap: 10px;
+        font-size: 18px;
     }
     .price {
-      font-size: 28px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+        font-size: 28px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     p {
-      font-size: 1.4rem;
-      font-weight:400;
-      letter-spacing: 1.2px;
-    }
-    .frame-tariff-photo img {
-      width: 100%;
-      height: auto;
-      max-width: 480px;
-      max-height: 280px;
+        font-size: 1.4rem;
+        font-weight:400;
+        letter-spacing: 1.2px;
     }
     .btn-tariff {
-      gap: 4px;
-      border-radius: 14px;
-      font-size: 20px;
+        gap: 4px;
+        border-radius: 14px;
+        font-size: 20px;
     }
     .slide-container {
         grid-template-columns: 1fr;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .third-column-tariff {
-      gap: 8px;
-    }
-    .one-stroke-description {
-      font-size: 16px;
-      gap: 4px;
-    }
-    .advise {
-      font-size: 14px;
-    }
-  }
-  
-  
-  /* ≥ 992px: 3 slides in 1 row */
-  @media (min-width: 992px) {
-    .slide-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .first-slide-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  /* 576px–991px: 2 in first row, 1 below */
-  @media (min-width: 576px) and (max-width: 991px) {
-    .slide-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .first-slide-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .price {
-        padding-top: 4px;
-        padding-bottom: px;
-    }
-  }
-  
+}
