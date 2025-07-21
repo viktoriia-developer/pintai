@@ -10,6 +10,7 @@
 
 body {
   height: 100vh;
+  width: 100%;
   background: var(--white-background, #FFF);
   background-size: cover;
   background-position: center;
@@ -51,17 +52,17 @@ position: relative;
   left: 0;
   z-index: 999;
   padding-top: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
   padding-bottom: 10px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-
+.section {
+  text-align: center;
+}
 .navbar
 .logo a {
   font-size: 1.5rem;
@@ -147,21 +148,6 @@ position: relative;
 }
 
 /*HERO*/
-section#hero {
-  height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-#hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
   /* Promo Banner (fixed top) */
   .promo {
     position: fixed;
@@ -266,12 +252,11 @@ section#hero {
   .swiper {
     width: 100%;
     height: 752px;
-    margin: 50px auto;
+    margin: 50px;
     border-radius: 40px;
     overflow: hidden;
     z-index: 799;
   }
-
   .swiper-slide {
     display:flex;
     align-items: center;
@@ -313,15 +298,61 @@ section#hero {
     padding-left: 10px;
   }
 
+  .overlay-btn {
+    border-radius: 20px;
+    background: var(--blue, #2E8AEE);
+    display: flex;
+    width: 220px;
+    padding: 8px 10px 10px 10px;
+    transform: translate(10%, 500%);
+    justify-content: center;
+    align-items: center;
+    color: var(--white-background, #FFF);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 44.8px */
+    letter-spacing: 1.4px;
+  }
+
   .frame-tariff-photo img {
     width: 100%;
     height: auto;
     max-width: 480px;
     max-height: 552px;
     object-fit: cover;
-    border-radius: 8px;
     border-radius: 30px;
     background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  }
+
+.card {
+  align-items: center;
+  border-radius: 0px 0px 30px 30px;
+  gap: 8px;
+  align-self: stretch;
+  color: var(--light-text, #575757);
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+  letter-spacing: 0.72px;
+}
+
+  .photo {
+    background-image: url('image/11.svg'); /* Replace with your image */
+    background-size: cover;        /* Fill the entire frame */  /* Keep image centered */
+    background-repeat: no-repeat;  /* No tiling */
+     /* Or use min-height / responsive units */
+    height: 635px;
+    display: flex;                 /* Center content */
+    align-items: center;
+    justify-content: center;                /* Text color over image */
+    text-align: center;
+    border-radius: 30px;
+    margin: auto;
   }
 
   .second-frame-tariff {
@@ -343,15 +374,22 @@ section#hero {
   }
 
   .overlay-text {
-    color:#FFF;
+    border-radius: 16px;
+    background: var(--white-background, #FFF); ;
+    color:#2A2A2A;
+    height: 56px;
+    width: 153px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text, #2A2A2A);
     font-family: Manrope;
-    font-size: 28px;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 130%; /* 36.4px */
-    letter-spacing: 1.12px;
-    transform: translate(0%, -200%);
-    color: white;
+    font-weight: 400;
+    line-height: 130%; /* 41.6px */
+    letter-spacing: 0.96px;
+    transform: translate(200%, 455%);
     text-align: center;
   }
   
@@ -399,6 +437,15 @@ section#hero {
   align-items: flex-start;
   flex-shrink: 0;
 }
+
+.cards {
+  display: flex;
+  padding: 80px 40px;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
 .yourself {
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -451,7 +498,7 @@ section#hero {
 
   .btn-tariff {
     display: flex;
-    padding: 18px 16px 20px 16px;
+    padding: 14px 16px 16px 16px;
     justify-content: center;
     align-items: center;
     gap: 6px;
@@ -477,7 +524,6 @@ section#hero {
     align-self: stretch;
     background: var(--gray-background, #F6F6F6);
   }
-
   .text {
     overflow: hidden;
     color: var(--text, #2A2A2A);
@@ -522,6 +568,21 @@ h1 {
 
   
 /*RESPONSIVE DESIGN*/
+@media (max-width: 1920px) {
+  .section {
+    padding: 40px;
+    text-align: center;
+  }
+  .navbar{
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 
 @media (max-width: 1200px) {
   .two-column-tariff {
@@ -654,7 +715,6 @@ h1 {
     max-height: 280px;
   }
   .btn-tariff {
-    
     gap: 4px;
     border-radius: 14px;
     font-size: 16px;
@@ -692,8 +752,10 @@ h1 {
   font-size: 1.5rem;
 }
 
-.slide p {
-  font-size: 1.1rem;
+.slide-main p {
+  padding-bottom: 20px;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 /* ≥ 992px: 3 slides in 1 row */

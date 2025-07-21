@@ -1,80 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Slide Grid</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      padding: 30px;
-      margin: 0;
-    }
-
-    .slide-container {
-      display: grid;
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .slide {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .slide h3 {
-      margin-bottom: 10px;
-      font-size: 1.5rem;
-    }
-
-    .slide p {
-      font-size: 1.1rem;
-    }
-
-    /* ≥ 992px: 3 slides in 1 row */
-    @media (min-width: 992px) {
-      .slide-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    /* 576px–991px: 2 in first row, 1 below */
-    @media (min-width: 576px) and (max-width: 991px) {
-      .slide-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* < 576px: 1 column */
-    @media (max-width: 575px) {
-      .slide-container {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS practice</title>
 </head>
 <body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="box"><img src="image/1 2.jpg" alt="photo"></div>
+            <div class="box"><img src="image/1 2.jpg" alt="photo"></div>
+            <div class="box"><img src="image/1 2.jpg" alt="photo"></div>
+        </div>
+    </div>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
 
-  <div class="slide-container">
-    <div class="slide">
-      <h3>Slide 1</h3>
-      <p>This is the first slide</p>
-    </div>
-    <div class="slide">
-      <h3>Slide 2</h3>
-      <p>This is the second slide</p>
-    </div>
-    <div class="slide">
-      <h3>Slide 3</h3>
-      <p>This is the third slide</p>
-    </div>
-  </div>
+.wrapper{
+    width: 100%;
+    position: relative;
+}
+.box {
+    max-width: 320px;
+}
+.container{
+    position: inherit;
+    gap: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 280px 280px 280px;
+    justify-content: space-around;
+}
 
+@media (max-width: 576px)
+{
+    .container{
+        gap: 40px;
+        display: block;
+        justify-content: center;
+        top: 25%;
+        left: 25%;
+    }
+}
+</style>
 </body>
 </html>
-
