@@ -36,6 +36,7 @@ section {
   .slide {
     background: white;
     padding-bottom: 30px;
+    gap: 20px;
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
@@ -50,28 +51,60 @@ section {
     font-size: 1.4rem;
     text-align: center;
   }
+  .frame-photo {
+    background-image: url(image/7.svg);
+    color: #FFF;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-align: center;
+    width: 100%;
+    padding-top:  500px;
+    padding-bottom: 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .frame-photo-2 {
+    background-image: url(image/9.svg);
+    color: #FFF;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-align: center;
+    width: 100%;
+    padding-top:  500px;
+    padding-bottom: 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .frame-photo-3 {
+    background-image: url(image/8.svg);
+    color: #FFF;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-align: center;
+    width: 100%;
+    padding-top:  500px;
+    padding-bottom: 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
 
-  .second-frame-tariff {
+  .description-tariff {
     display: flex;
-    padding: 0px 30px 30px 30px;
+    padding: 30px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
     border-radius: 0px 0px 30px 30px;
-  }
-  .first-description {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    gap: 8px;
-    align-self: stretch;
-  }
-  .third-column-tariff {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
   }
 
   .two-column-tariff {
@@ -128,7 +161,7 @@ section {
     align-items: center;
     gap: 6px;
     align-self: stretch;
-    border-radius: 24px;
+    border-radius: 20px;
     border: 1px solid var(--blue, #2E8AEE);
     background: var(--blue, #2E8AEE);
     color: var(--white-background, #FFF);
@@ -150,6 +183,15 @@ section {
     .first-slide-container {
         grid-template-columns: repeat(3, 1fr);
     }
+    .frame-photo {
+        padding-top:  400px;
+    }
+    .frame-photo-2 {
+        padding-top:  400px;
+    }
+    .frame-photo-3 {
+        padding-top:  400px;
+    }
 }
 
 /* 576px–991px: 2 in first row, 1 below */
@@ -162,15 +204,33 @@ section {
     }
     .price {
         padding-top: 4px;
-        padding-bottom: px;
+        padding-bottom: 4px;
     }
     .two-column-tariff {
         min-width: 190px;
       }
+    .frame-photo {
+        padding-top:  300px;
+    }
+    .frame-photo-2 {
+        padding-top:  300px;
+    }
+    .frame-photo-3 {
+        padding-top:  300px;
+    }
 }
       
 /* i checked it.Done */
 @media (max-width: 576px) {
+    .frame-photo {
+        padding-top:  300px;
+    }
+    .frame-photo-2 {
+        padding-top:  300px;
+    }
+    .frame-photo-3 {
+        padding-top:  300px;
+    }
     .two-column-tariff {
         min-width: 134px;
       }
