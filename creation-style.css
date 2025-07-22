@@ -79,6 +79,7 @@ section {
     padding-bottom: 20px;
     flex-direction: column;
     gap: 4px;
+    min-height: 134px;
     align-items: flex-start;
   }
   .one-stroke-description {
@@ -163,10 +164,16 @@ section {
         padding-top: 4px;
         padding-bottom: px;
     }
+    .two-column-tariff {
+        min-width: 190px;
+      }
 }
       
 /* i checked it.Done */
 @media (max-width: 576px) {
+    .two-column-tariff {
+        min-width: 134px;
+      }
     .one-stroke-description {
         gap: 16px;
         font-size: 20px;
