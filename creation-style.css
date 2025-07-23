@@ -1,20 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
   }
 
 section {
     width: 100%;
     position: relative;
 }
+h1 {
+    color: #A88BFA;
+    padding-bottom: 10px;
+}
+h2 {
+    padding-bottom: 20px;
+}
 .creating {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 80px;
     gap: 36px;
     background: var(--gray-background, #F6F6F6);
     width:100%;
     position: inherit;
+    text-align: center;
+    align-items: center;
   }
   .text {
     overflow: hidden;
@@ -25,12 +38,13 @@ section {
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 130%; /* 46.8px */
+    line-height: 150%; /* 46.8px */
     letter-spacing: 1.44px;
   }
   .slide-container {
     display: grid;
     gap: 20px;
+    padding-top: 24px;
   }
   
   .slide {
@@ -108,6 +122,34 @@ section {
     border-radius: 0px 0px 30px 30px;
   }
 
+  .text {
+    overflow: hidden;
+    color: var(--text, #2A2A2A);
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 46.8px */
+    letter-spacing: 1.44px;
+  }
+  .ai-text {
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    background: linear-gradient(90deg, #2C8AEE 58.34%, #AA8BFA 74.03%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-overflow: ellipsis;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 1.44px;
+  }
   .two-column-tariff {
     display: flex;
     padding-bottom: 20px;
@@ -116,12 +158,18 @@ section {
     min-height: 134px;
     align-items: flex-start;
   }
+  .frame-icon {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+  }
   .one-stroke-description {
     display: flex;
     align-items: center;
     font-size: 24px;
-    gap: 16px;
+    gap: 10px;
     align-self: stretch; 
+    white-space: nowrap;
   }
   .advise {
     display: flex;
