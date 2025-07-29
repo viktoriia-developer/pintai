@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all .5s;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+}
+h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #FF6EC4 0%, #7873F5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Manrope;
+    font-size: 32px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+    letter-spacing: 1.6px;
+}
+h2 {
+    color: var(--text, #2A2A2A);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+    letter-spacing: 1.6px;
+    text-transform: capitalize;
+}
+/* body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #F6F6F6;
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+} */
+.cards-main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #F6F6F6;
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+}
+.ai-text {
+    overflow: hidden;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #FF6EC4 0%, #7873F5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-overflow: ellipsis;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 1.44px;
+}
+.text {
+    overflow: hidden;
+    color: var(--text, #2A2A2A);
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 46.8px */
+    letter-spacing: 1.44px;
+  }
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2.55rem 5%;
+}
+.box-container .box {
+    flex: 1 1 27rem;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, alpha)80%;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    cursor: pointer;
+    margin: 1rem;
+}
+.box-container .box .img {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    text-align: center;
+}
+.box-container .box .img img {
+    width: 90rem;
+    height: 55.2rem;
+    border-radius: 30px;
+    align-items: center;
+    object-fit: cover;
+}
+.box-container .box .info .details {
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.title {
+    font-size: 3rem;
+    width: 155px;
+    height: 56px;
+    border-radius: 16px;
+    text-align: center;
+    background: white;
+    color: #2A2A2A;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    padding: 12px 4px 14px 0px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.title-card {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2A2A2A;
+}
+
+.box-container .box .overlay {
+    position: absolute;
+    border-radius: 30px;
+    top: 0;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    border-radius: 30px;
+    border-radius: 30px;
+    border: 6px solid var(--3, #C471D9);
+    left: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: none;
+}
+.box-container .box .overlay a {
+    background: white;
+    color: #C471D9;;
+    border-radius: 40px;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.box-container .box:hover .overlay a {
+    transform: translateY(0);
+}
+.box-container .box:hover .overlay {
+    transform: scale(1);
+}
+
+.button-get-started {
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 36.4px */
+    letter-spacing: 1.12px;
+    display: flex;
+    padding: 10px 12px 12px 12px;
+    justify-content: center;
+    align-items: center; 
+    height: 67px;
+    width: 220px;
+    border-radius: 16px;
+    padding: 10px 12px 12px 12px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    background: var(--blue, #2E8AEE);
+    position: absolute;
+    bottom: 4%;
+    text-align: center;
+    align-self: stretch;
+}
+
+.button-get-started:hover {
+    color: white;
+    background: var(--blue, #4FABF8);
+}
+.gradient-text{
+    -webkit-line-clamp: 5;
+    background: linear-gradient(90deg, #2C8AEE 19.3%, #AA8BFA 40.82%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Manrope;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 1.92px;
+  }
+  .van-gogh{
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    color: var(--text, #2A2A2A);
+    font-family: Manrope;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 1.92px;
+  }
+  p {
+    font-size: 2.4rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 52px */
+    letter-spacing: 1.6px;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    text-align: right;
+  }
+
+.second-stroke-1-section{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Manrope;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 84.5px */
+    letter-spacing: 2.6px;
+    background: var(--3, linear-gradient(90deg, #2C8AEE 0%, #AA8BFA 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .logo {
+    width: 180px;
+    height: auto;
+  }
+  @media (min-width: 1920px) {
+    p {
+        font-size: 8rem;
+    }
+    .gradient-text{
+        font-size: 8rem;
+    }
+    .second-stroke-1-section{
+        font-size: 8rem;
+    } 
+    .van-gogh{
+        font-size: 8rem;
+    }  
+  }
+  @media (min-width: 1200px) {
+    p {
+        font-size: 4rem;
+    }
+    .gradient-text{
+        font-size: 4rem;
+    }
+    .second-stroke-1-section{
+        font-size: 4rem;
+    } 
+    .van-gogh{
+        font-size: 4rem;
+    }  
+  }
+

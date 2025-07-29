@@ -4,48 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins"
+    rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="new-style.css">
     <title>CSS practice</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <div class="box"><img src="image/1 2.jpg" alt="photo"></div>
-            <div class="box"><img src="image/1 2.jpg" alt="photo"></div>
-            <div class="box"><img src="image/1 2.jpg" alt="photo"></div>
+    <section class="cards-creating">
+        <h2>Creating</h2>
+        <h1>Select a kit</h1>
+        <span class="text">Turn your photo into a breathtaking <span class="ai-text">AI-generated</span> artwork<br>made for you to bring to life with paint</span>
+        <div class="box-container">
+            <div class="box">
+                <!-- <span class="title-card">Kit 1</span> -->
+                <div class="img">
+                    <img src="image/7.svg" alt="">
+                </div>
+                <div class="info">
+                    <div class="title">Magic Mirror</div>
+                    <div class="details">
+                        <span class="price">1000£</span> <span class="old-price"> 1500£</span>
+                    </div>
+                    <div class="description">
+                        <div class="one-stroke"><img src="image/photo.svg" alt="">Upload your photo</div>
+                        <div class="one-stroke"><img src="image/text.svg" alt="">Add a creative promp</div>
+                    </div>
+                    <div class="advise">
+                        Perfect for portraits with a magical touch 
+                    </div>
+                </div>
+                <div class="overlay">
+                    <a href="#">Select</a>
+                </div>
+            </div>
+            <div class="box">
+                <span class="title-card">Kit 2</span>
+                <div class="img">
+                    <img src="image/9.svg" alt="">
+                </div>
+                <div class="info">
+                    <div class="title">Dream Mirror</div>
+                    <div class="details">
+                        <span class="price">1000£</span> <span class="old-price"> 1500£</span>
+                    </div>
+                    <div class="description">
+                        <div class="one-stroke"><img src="image/text.svg" alt="">Add a creative promp</div>
+                    </div>
+                    <div class="advise">
+                        Perfect for people & pets — with a dreamy twist 
+                    </div>
+                </div>
+    
+                <div class="overlay">
+                    <a href="#">Select</a>
+                </div>
+            </div>
+            <div class="box">
+                <span class="title-card">Kit 3 "Memory Canvas"</span>
+                <div class="img">
+                    <img src="image/8.svg" alt="">
+                </div>
+                <div class="info">
+                    <!-- <div class="title">Memory Canvas</div> -->
+                    <div class="details">
+                        <span class="price">1000£</span> <span class="old-price"> 1500£</span>
+                    </div>
+                    <div class="description">
+                        <div class="one-stroke"><img src="image/photo.svg" alt="">Upload your photo</div>
+                    </div>
+                    <div class="advise">
+                        The purest way to honor a memory — just paint it
+                    </div>
+                </div>
+    
+                <div class="overlay">
+                    <a href="#">Select</a>
+                </div>
+            </div>
         </div>
-    </div>
-<style>
-    *{
-    margin: 0;
-    padding: 0;
-}
-
-.wrapper{
-    width: 100%;
-    position: relative;
-}
-.box {
-    max-width: 320px;
-}
-.container{
-    position: inherit;
-    gap: 40px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 280px 280px 280px;
-    justify-content: space-around;
-}
-
-@media (max-width: 576px)
-{
-    .container{
-        gap: 40px;
-        display: block;
-        justify-content: center;
-        top: 25%;
-        left: 25%;
-    }
-}
-</style>
+    </section>
+    
 </body>
 </html>

@@ -21,7 +21,7 @@ h2 {
     padding-bottom: 20px;
 }
 .creating {
-    padding: 80px;
+    /* padding: 80px; */
     gap: 36px;
     background: var(--gray-background, #F6F6F6);
     width:100%;
@@ -50,6 +50,8 @@ h2 {
   .slide {
     background: white;
     gap: 20px;
+    display: flex;
+    flex-direction: column;
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
@@ -224,7 +226,7 @@ h2 {
  
   /*RESPONSIVE DESIGN*/
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1300px) { 
     .slide-container {
         grid-template-columns: repeat(3, 1fr);
     }

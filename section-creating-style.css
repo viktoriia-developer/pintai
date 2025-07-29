@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all .5s;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+}
+
+body {
+    background: #F6F6F6;
+    min-height: 100vh;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2.55rem 5%;
+}
+.box-container .box {
+    flex: 1 1 35rem;
+    background: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, alpha)80%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 1rem;
+}
+.box-container .box .img {
+    padding: 1rem;
+    background: white;
+    text-align: center;
+}
+.box-container .box .img img {
+    width: 25rem;
+    height: 20rem;
+    object-fit: cover;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.8));
+}
+
+.box-container .box .info {
+    padding: 1rem;
+    color: #2A2A2A;
+    font-size: 2rem;
+}
+.box-container .box .info .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0rem ;
+    border-top: 1px solid #2A2A2A;
+}
+.box-container .box .info .title {
+    margin-bottom: 1rem;
+}
+.box-container .box .info .details .price {
+    font-size: 2rem;
+    color: blueviolet;
+}
+.box-container .box .info .details .price span {
+    font-size: 1.7rem;
+    text-decoration: line-through;
+    color: #888;
+}
+
+.box-container .box .info .details .stars {
+    color: yellowgreen;
+    font-size: 1.7rem;
+}
+.box-container .box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 22.39rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    background: rgba(0, 0, 0, .8);
+    transition: none;
+}
+.box-container .box .overlay a {
+    background: white;
+    color: black;
+    padding: 1.5rem;
+    font-size: 2rem;
+    transform: translateY(-15rem);
+    transition: transform  .3s .1s;
+}
+.box-container .box:hover .overlay a {
+    transform: translateY(0);
+}
+.box-container .box:hover .overlay {
+    transform: scale(1);
+}
+
+
