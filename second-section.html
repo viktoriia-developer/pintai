@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiper Parallax Example</title>
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <link rel="stylesheet" href="second-section.css">
+</head>
+<body>
+
+  <!-- Swiper Container -->
+    <section class="second-section">
+        <div class="swiper" id="mySwiper">
+            <h2>Gallery of pictures</h2>
+            <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-content-1" data-swiper-parallax="0"> 
+                  <div class="field-prompt">
+                    Happy couple in cafe<div class="caret"></div>
+                    <div class="img-icon">
+                      <img src="image/Copy.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content-2" data-swiper-parallax="0"> 
+                  <div class="field-prompt">
+                    A deer in showy forest<div class="caret"></div>
+                    <div class="img-icon">
+                      <img src="image/Copy.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content-3" data-swiper-parallax="0"> 
+                  <div class="field-prompt">
+                    A couple are reading a book<div class="caret"></div>
+                    <div class="img-icon">
+                      <img src="image/Copy.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination and Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+    </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+      const swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 1,
+      speed: 2000,        // ✅ only 1 slide per view
+      autoplay: {
+        delay: 3000,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    });
+  </script>
+</body>
+</html>
