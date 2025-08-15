@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiper Parallax Example</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins"
+  rel="stylesheet" type="text/css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="common-1-2-sections.css">
+</head>
+<header>
+  <div class="promo">
+    <div>20% OFF your first order</div>
+    <div class="stroke-promo">
+        <div>Try the magic now!</div> 
+        <div class="icon-promo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                <path d="M2.31582 20L0.5 18.225L8.91415 10L0.5 1.775L2.31582 0L12.5458 10L2.31582 20Z" fill="white"/>
+                <path d="M10.2709 20L8.45508 18.225L16.8692 10L8.45508 1.775L10.2709 0L20.5009 10L10.2709 20Z" fill="white"/>
+              </svg>
+        </div>
+    </div>
+  </div>
+</header>
+<body>
+  <!-- The first Section -->
+    <section class="cards-main">
+      <p>
+          Immerse <span class="gradient-text">yourself</span>
+          into canvas like <span class="van-gogh">Van Gogh</span>
+          <br><span class="second-stroke-1-section">AI Paint-by-Numbers</span>
+          <br><img class="logo" src="image/logo.svg" alt="Logo" />
+      </p>
+      <div class="box-container">
+          <div class="box">
+          <div class="name-card">Turn <span class="bold-text">yourself</span> into masterpieces</div>
+          <div class="box">
+              <div class="img">
+                  <img src="image/image-new/1.jpg" alt="">
+                  <div class="info">
+                      <div class="title">1000£</div>
+                      <div class="button-get-started">Get Started</div>
+                  </div>
+              </div>
+              <div class="overlay"></div>
+          </div>
+      </div>
+          <div class="box-2">
+              <span class="name-card">Bring your dream with prompt</span>
+              <div class="box">
+                  <div class="img">
+                      <img src="image/image-new/2.jpg" alt="">
+                      <div class="info">
+                          <div class="title">1000£</div>
+                          <div class="button-get-started">Get Started</div>
+                      </div>
+                  </div>
+                  <div class="overlay"></div>
+              </div>
+          </div>
+          <div class="box-3">
+              <span class="name-card">Bring your photos into canvas</span>
+              <div class="box">
+                  <div class="img">
+                      <img src="image/image-new/3.jpg" alt="">
+                      <div class="info">
+                          <div class="title">1000£</div>
+                          <div class="button-get-started">Get Started</div>
+                      </div>
+                  </div>
+                  <div class="overlay"></div>
+              </div>
+          </div>
+      </div>
+    </section>
+  <!-- The second Section Swiper Container -->
+    <section id="second-section">
+        <div class="swiper" id="mySwiper">
+            <h2>Gallery of pictures</h2>
+            <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-content-1" data-swiper-parallax="0"> 
+                  <div class="field-prompt">
+                    Happy couple in cafe<div class="caret"></div>
+                    <div class="img-icon">
+                      <img src="image/Copy.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content-2" data-swiper-parallax="0"> 
+                  <div class="field-prompt">
+                    A deer in showy forest<div class="caret"></div>
+                    <div class="img-icon">
+                      <img src="image/Copy.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content-3" data-swiper-parallax="0"> 
+                  <div class="field-prompt">
+                    A couple are reading a book<div class="caret"></div>
+                    <div class="img-icon">
+                      <img src="image/Copy.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination and Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+    </section>
+    <section id="third-section">
+      <div class="third-section">
+        <h2>Creation</h2>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-center">
+        <div class="footer-container">
+          <!-- Column 1 -->
+          <div class="footer-col">
+            <h4>Sections</h4>
+            <li><a href="#second-section">Gallery</a></li>
+            <li><a href="#second-section">Creating</a></li>
+            <li><a href="#second-section">Instagram</a></li>
+          </div>
+          <!-- Column 2 -->
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="mailto:info@thelondonpintai.co.uk?subject=Enquiry&body=Hello%2C%20I%20have%20a%20question%20about...">
+              info@thelondonpintai.co.uk
+            </a>
+            <a>12367468768687</a>
+            <a>123 High Street, London, <br>W1A 1AA, United Kingdom</a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Bottom part -->
+      <div class="footer-bottom">
+        <div class="legal-line">
+          <p><a href="/privacy-policy">Privacy Policy</a></p>
+          <p><a href="/terms">Terms & Conditions</a></p>
+          <p><a href="/returns">Returns & Refunds</a></p>
+        </div>
+        <p>All prices include VAT where applicable</p>
+        <p>© 2025 The London PintAi</p>
+        <p>Registered in England & Wales | Company No. 12345678 | VAT No. GB123456789</p>
+      </div>
+    </footer>
+ 
+  <!-- Swiper JS (to the second section) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper (to the second section) -->
+  <script>
+      const swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 1,
+      speed: 2000,        // ✅ only 1 slide per view
+      autoplay: {
+        delay: 3000,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    });
+  </script>
+</body>
+</html>

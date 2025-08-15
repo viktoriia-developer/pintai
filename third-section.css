@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+}
+.third-section {
+    display: flex;
+    font-family: sans-serif;
+    background: #FFFFFF;
+    color: #2a2a2a;
+    max-width: 100%;
+    overflow-x: hidden;
+    align-items: center;
+    flex-direction: column;
+}
+.body {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+ h2 {
+    color: var(--text, #2A2A2A);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+    letter-spacing: 1.6px;
+    text-transform: capitalize;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    width: 1195px;
+    align-items: center;
+}
+
+.insta-post {
+    width: 385px;
+    height: 385px;
+    overflow: hidden;
+}
+
+.instagram-media {
+    max-width: 100% !important;
+    min-width: unset !important;
+    height: 100% !important;
+    aspect-ratio: 1 / 1; /* Квадрат */
+}
+/* Wait until embed is rendered, then hide header parts */
+.instagram-media > div:first-child > a > div:first-child {
+    display: none !important; /* Profile icon + name */
+  }
+  
+  .instagram-media > div:first-child > a > div:nth-child(4) {
+    display: none !important; /* "View this post on Instagram" text */
+  }
+  .Header {
+    align-items: center;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: row;
+    height: 54px;
+    padding: 10px;
+}
+
+  @media (min-width: 2000px) {
+    .instagram-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        width: 1840px;
+        align-items: center;
+    }
+    
+    .insta-post {
+        width: 600px;
+        height: 600px;
+        overflow: hidden;
+    }
+}
+  
+@media (max-width: 1200px) {
+    .instagram-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        width: 700px;
+        align-items: center;
+    }
+    
+    .insta-post {
+        width: 220px;
+        height: 220px;
+        overflow: hidden;
+    }
+}
+@media (max-width: 966px) {
+    .instagram-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        width: 640px;
+        align-items: center;
+    }
+    
+    .insta-post {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+    }
+    a.ViewProfileButton, a.FollowButton {
+        background-color: rgb(var(--ig-primary-button));
+        border-radius: 3px;
+        color: rgb(var(--web-always-white));
+        flex-shrink: 0;
+        font-weight: var(--font-weight-system-semibold);
+        margin-left: 2px;
+        padding: 2px 6px;
+        text-decoration: none;
+    }
+    .Header {
+        align-items: center;
+        box-sizing: border-box;
+        display:flex;
+        flex-direction: row;
+        height: 34px;
+        padding: 6px;
+    }
+}
+@media (max-width: 645px) {
+    .instagram-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        width: 490px;
+        align-items: center;
+    }
+    
+    .insta-post {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 430px) {
+    .instagram-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        width: 340px;
+        align-items: center;
+    }
+    
+    .insta-post {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+    }
+}
