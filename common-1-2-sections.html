@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Swiper Parallax Example</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins"
@@ -9,8 +10,10 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="common-1-2-sections.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<header>
+
+  <header>
   <div class="promo">
     <div>20% OFF your first order</div>
     <div class="stroke-promo">
@@ -23,10 +26,28 @@
         </div>
     </div>
   </div>
+    <div class="navbar">
+      <div class="logo"><a href="#first-section"><img src="image/small-logo.svg" alt=""></a></div>  
+      <ul class="links">
+        <li><a href="#second-section" style="color: #2A2A2A;">Gallery</a></li> 
+        <li><a href="#second-section" style="color: #2A2A2A;">Instagram</a></li>
+        <li><a href="#fourth-section" style="color: #2A2A2A;">Creation</a></li>
+      </ul>
+      <a href="#" class="action_btn">Get Started</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+        <li><a href="#second-section" style="color: #2A2A2A;">Gallery</a></li>
+        <li><a href="#second-section" style="color: #2A2A2A;">Instagram</a></li>
+        <li><a href="#second-section" style="color: #2A2A2A;">Creation</a></li>
+        <li><a href="#" class="action_btn">Get Started</a></li>
+    </div>
 </header>
-<body>
   <!-- The first Section -->
-    <section class="cards-main">
+   <section id="first-section">
+    <div class="cards-main">
       <p>
           Immerse <span class="gradient-text">yourself</span>
           into canvas like <span class="van-gogh">Van Gogh</span>
@@ -74,11 +95,12 @@
               </div>
           </div>
       </div>
-    </section>
+    </div>
+   </section>
   <!-- The second Section Swiper Container -->
     <section id="second-section">
         <div class="swiper" id="mySwiper">
-            <h2>Gallery of pictures</h2>
+            <h2>Gallery</h2>
             <div class="parallax-bg" data-swiper-parallax="-23%"></div>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -117,8 +139,8 @@
             <div class="swiper-button-next"></div>
           </div>
     </section>
-    <section id="third-section">
-      <div class="third-section">
+    <section id="fourth-section">
+      <div class="fourth-section">
         <h2>Creation</h2>
       </div>
     </section>
@@ -156,7 +178,46 @@
         <p>Registered in England & Wales | Company No. 12345678 | VAT No. GB123456789</p>
       </div>
     </footer>
- 
+    <!-- For menu -->
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn');
+      const toggleBtnIcon = document.querySelector('.toggle_btn i');
+      const dropDownMenu = document.querySelector('.dropdown_menu');
+      const menuLinks = document.querySelectorAll('.dropdown_menu a'); // all links in menu
+    
+      let closeTimer; // to hold the timer reference
+    
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+    
+        toggleBtnIcon.className = isOpen
+          ? 'fa-solid fa-xmark'
+          : 'fa-solid fa-bars';
+    
+        // If menu is open → start timer
+        if (isOpen) {
+          clearTimeout(closeTimer); // reset if user clicks fast
+          closeTimer = setTimeout(() => {
+            closeMenu();
+          }, 5000); // auto close after 5 sec (adjust as needed)
+        }
+      };
+    
+      // Function to close menu safely
+      function closeMenu() {
+        dropDownMenu.classList.remove('open');
+        toggleBtnIcon.className = 'fa-solid fa-bars';
+      }
+    
+      // Close menu when any link inside is clicked
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          closeMenu();
+        });
+      });
+    </script>
+    
   <!-- Swiper JS (to the second section) -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
