@@ -28,6 +28,8 @@ h2 {
     position: inherit;
     text-align: center;
     align-items: center;
+    padding-right: 80px;
+    padding-left: 80px;
   }
   .text {
     overflow: hidden;
