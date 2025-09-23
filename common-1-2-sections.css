@@ -821,6 +821,11 @@ p {
 .img-icon {
   padding-left: 24px;
   align-items: center;
+  margin-top: 0.3em;
+  display: block;
+}
+.img-icon:hover {
+  filter: brightness(0.8);
 }
 /* i stopped here */
 .swiper-slide .slide-content-1 .slide-content-2 .slide-content-3 { 
@@ -861,7 +866,7 @@ p {
 .swiper-button-prev,
 .swiper-button-next {
   margin-top: 6px;
-  background-color:rgba(42, 42, 42, 0.5);  
+  background-color:#646378;  
   bottom: 20px; /* Distance from the bottom */
   top: auto;    /* Cancel default top */
   z-index: 10;
@@ -880,7 +885,7 @@ p {
 /* Optional: hover effect */
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: #2A2A2A;
+  background-color: #444;
 }
 /* Optional: click effect */
 .swiper-button-next:active,
@@ -924,7 +929,6 @@ p {
   }
   .img-icon {
     padding-left: 14px;
-    align-items: center;
   }
   h2 { 
     font-size: 2rem;
@@ -980,7 +984,9 @@ p {
     padding-left: 6px;
     padding-right: 0px;
     border-radius: 12px;
+    align-items: center;
   }
+
   .slide-content-1 {
     height: 35.2rem;
     border-radius: 30px;
@@ -1036,7 +1042,7 @@ p {
 
 
 
-/* fourth-section */
+/* FOURTH-SECTION */
 .fourth-section {
   font-family: sans-serif;
   padding-top: 80px;
@@ -1062,153 +1068,431 @@ p {
   font-weight: normal;
 }
 
-.creation-box-container {
+.buttons-creation {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.creation-box-container .creation-box {
-  flex: 1 1 27rem;
-  text-align: center;
-  border-radius: 30px;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, alpha)80%;
-  position: relative;
-  overflow: hidden;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  align-items: center;
-  background-color: white;
-  cursor: pointer;
-  margin: 1rem;
-}
-.creation-box-container .creation-box .creation-img {
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  background-color: white;
-}
-.creation-box-container .creation-box .creation-info .details {
-  align-items: center;
   flex-direction: row;
-  gap: 16px;
-  text-align: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+.creation-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;   /* 🔥 make left & right equal height */
+  flex-direction: row;
+  gap: 50px;
   flex-wrap: wrap;
-  padding: 10px;
-}
-.title {
-  font-size: 3rem;
-  width: 155px;
-  height: 56px;
-  border-radius: 16px;
-  text-align: center;
-  background: white;
-  color: #2A2A2A;
-  position: absolute;
-  top: 4%;
-  right: 5%;
-  margin-bottom: 1rem;
-  text-align: center;
-  display: flex;
-  padding: 12px 4px 14px 0px;
-  justify-content: center;
-  align-items: center;
-  align-self: stretch;
 }
 
-.title-card {
-  font-size: 28px;
-  font-weight: bold;
-  color: #2A2A2A;
-}
-
-.creation-box-container .creation-box .overlay {
-  position: absolute;
-  border-radius: 30px;
-  top: 0;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 30px;
-  border: 6px solid #7C73F3;
-  left: auto;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(0);
-  transition: none;
-}
-.creation-box-container .creation-box .overlay a {
-  background: white;
-  color: #C471D9;;
+/* right side */
+.right-part {
+  padding: 40px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 710px;
   border-radius: 40px;
-  font-size: 3rem;
-  font-weight: bold;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 90px;
-  padding-right: 90px;
-}
-.creation-box-container .creation-box:hover .overlay a {
-  transform: translateY(0);
-}
-.creation-box-container .creation-box:hover .overlay {
-  transform: scale(1);
+  background: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
-.description-button-get-started {
-  font-family: Manrope;
+/* left side (two fields stacked) */
+.main-creation-description {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  gap: 45px;
+  min-width: 280px;
+  max-width: 540px;
+  justify-content: stretch;
+}
+
+/* each field takes 50% of height */
+.main-creation-description .creation-description {                 /* 🔥 equal height split */
+  display: flex;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  gap: 16px;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.creation-description {
+  display: flex;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  gap: 16px;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.creation-text {
+  display: flex;
+  flex-direction: column;
+  color: #2A2A2A;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 130%; /* 36.4px */
-  letter-spacing: 1.12px;
+  gap: 12px;
+  letter-spacing: 130%;
+  font-weight: 200;
+}
+
+.right-part::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* cover full block */
+  border-radius: 40px;
+  padding: 5px; /* border thickness */
+  background: linear-gradient(90deg, #E6AFE6, #BFB9FF);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1; /* stay behind content */
+}
+  
+
+/* Section titles aligned with fields */
+.section-title {
+  width: 100%;
+  max-width: 500px; 
+  margin-right: auto;
+  margin-bottom: 16px;
+  text-align: left;
+  font-size: 20px;
+}
+
+
+/* Контейнер */
+.dropdown-container {
+  position: relative; /* или absolute, если нужно */
+  z-index: 9999; /* выше, чем у delete-btn */
+  width: 100%;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* Селект и скрытый инпут */
+.dropdown-container select,
+.hidden-input input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 23.5px;
+  border-radius: 12px;
+  outline: none;
+  appearance: none;
+  font-size: 16px;
+  color: #000;
+}
+
+.hidden-input { display: none; margin-top: 10px;}
+
+/* Контейнер Choices */
+.choices {
+  border-radius: 14px;
+  overflow: hidden;
+  border: none;
+}
+
+/* Поле "Who is in the photo" (без бордера по умолчанию) */
+.choices__inner {
+  border: none !important;
+  border-radius: 12px 12px 0 0 !important;
+  background: #fff !important;
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+
+/* Только при открытом меню — чёрная нижняя граница */
+.is-open .choices__inner {
+  border-bottom: 1px solid #000 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Выпадающий список */
+.choices__list--dropdown {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  margin: 0;
+  border: none !important;
+  border-radius: 0 0 12px 12px !important;
+  background: #fff !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Элементы списка */
+.choices__item {
+  border: none !important;
+  padding: 10px 12px;
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* Скругление последнего элемента */
+.choices__list--dropdown .choices__item:last-child {
+  border-radius: 0 0 12px 12px !important;
+}
+
+/* Hover */
+.choices__list--dropdown .choices__item.is-highlighted {
+  background: #ECE8F4 !important;
+  color: #000 !important;
+}
+
+/* Кнопки */
+.button-container button {
+  padding: 12px 40px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+/* ===== показываем чёрную нижнюю границу ТОЛЬКО когда меню Choices открыто =====
+   Этот код нужно ставить в самом конце CSS
+*/
+
+.choices { position: relative; } /* создаём контекст для z-index */
+
+.choices__inner {
+  border-bottom: none !important;        /* по умолчанию без границы */
+  position: relative !important;         /* нужно для ::after */
+  z-index: 3;                            /* выше дропдауна */
+}
+
+/* Когда дропдаун открыт — добавляем чёрную линию снизу */
+.choices.is-open .choices__inner::after,
+.is-open .choices__inner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.1px;                   /* толщина линии */
+  background: #C4BFE7;              /* чёрный цвет */
+  z-index: 5;                    /* выше списка */
+}
+
+/* Обеспечиваем, что дропдаун будет под границей */
+.choices__list--dropdown {
+  z-index: 2 !important;
+}
+
+/* На всякий случай убираем transform, если библиотека его добавляет */
+.choices__list--dropdown,
+.choices__inner {
+  transform: none !important;
+}
+
+.skip-btn {
+  background: #67628A;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  border-radius: 16px;
+}
+.skip-btn:hover {
+  filter: brightness(1.3);  /* darker on hover */
+}
+.next-btn {
+  background: #ABA6CE;
+  color: white;
+  cursor: not-allowed;
+  cursor: pointer;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  border-radius: 16px;
+}
+.next-btn.active {
+  background: #67628A;
+  cursor: pointer;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  border-radius: 16px;
+}
+.next-btn.active:hover {
+  filter: brightness(1.3);  /* darker on hover */
+}
+.back-btn {
+  background: #67628A;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 300px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  border-radius: 16px;
+}
+.back-btn:hover {
+  filter: brightness(1.3);  /* darker on hover */
+}
+
+/* Stepper */
+.stepper {
   display: flex;
   justify-content: center;
-  align-items: center; 
-  height: 52px;
-  width: 250px;
-  border-radius: 20px;
-  color: white;
-  background: var(--blue, #7C73F3);
-  margin: auto;
-  text-align: center;
-  align-self: stretch;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.step {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  font-weight:normal; 
+  font-size: 20px;
+  background: rgba(221, 221, 240, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+.line {
+  align-items: center;
+  flex: 0.1;
+  height: 2px;
+  background: rgba(221, 221, 240);
+  margin: 0 -2px;
+  z-index: 0;
+  justify-content: center;
 }
 
-.button-get-started:hover {
-  color: white;
-  background: var(--blue, #4FABF8);
-}
-.creation-name-card {
-  font-size: 24px;
-}
-.one-stroke-description {
+.step.active {   background: rgba(184, 183, 229);font-weight: 600; font-size: 20px; border-color: #646378; border-width: 2px;}
+.step.completed { background: #4CAF50; font-weight: 600; font-size: 20px;}
+
+
+
+ /* Container */
+ .pond-box {
+  border-radius: 20px;
+  background: white; /* gray background for visibility */
+  width: 100%;
+  padding: 8px 10px 10px;
+  box-sizing: border-box;
+  overflow: hidden;
   display: flex;
-  font-size: 20px;
-  gap: 8px;
-  font-weight:400;
-  align-self:center;
-  min-width: 250px; 
-  white-space: nowrap;
-}
-.description-icon {
-  width: 32px;
-  height: 32px;
-  align-items: center;
-}
-.description {
-  display: flex;
-  padding-bottom: 20px;
-  padding-top: 20px;
   flex-direction: column;
-  gap: 4px;
-  height: 108px;
-  align-items:center;
+  align-items: center;       /* horizontal center */
+  justify-content: center;   /* vertical center */
+  min-height: 200px;         /* optional: ensures enough height to see centering */
 }
-.description-icon svg {
-  align-items: center;
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 15px;
+  justify-content: center;   /* horizontal center of grid */
 }
+
+.upload-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+  .item {
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+
+  .photo-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background: white;
+  }
+
+  .photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Delete cross button */
+  .delete-btn {
+    position: absolute;
+    top: -8px;    
+    left: -8px;   
+    width: 22px;
+    height: 22px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 10;   /* always on top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .delete-btn:hover {
+    background: #AE2A56;
+  }
+
+  /* Load button */
+  .upload-btn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  #customLoadBtn {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #customLoadBtn img {
+    width: 64px;
+    height: 64px;
+    display: block;
+    transition: filter 0.2s ease-in-out;
+  }
+
+  #customLoadBtn:hover img {
+    filter: brightness(1.1);
+  }
+
+  @media (min-width: 680px) and (max-width: 730px) {
+    /* стили для экранов от 680px до 730px */
+    .pond-box {
+  
+    }
+    .item{
+      height: 50px;
+      width: 50px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 50px);
+      gap: 8px;
+      justify-content: center;   /* horizontal center of grid */
+    }
+  }

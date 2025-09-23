@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="common-1-2-sections.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link href="https://unpkg.com/filepond/dist/filepond.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css" rel="stylesheet">
+
+  <!-- Choices.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+  <!-- Stepper Library CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/bs-stepper/dist/css/bs-stepper.min.css" />
 </head>
 
   <header>
@@ -108,7 +116,7 @@
                   <div class="field-prompt">
                     Happy couple in cafe<div class="caret"></div>
                     <div class="img-icon">
-                      <img src="image/Copy.svg" alt="">
+                      <img src="image/image-new/Copy.svg" alt="">
                     </div>
                   </div>
                 </div>
@@ -118,7 +126,7 @@
                   <div class="field-prompt">
                     A deer in showy forest<div class="caret"></div>
                     <div class="img-icon">
-                      <img src="image/Copy.svg" alt="">
+                      <img src="image/image-new/Copy.svg" alt="">
                     </div>
                   </div>
                 </div>
@@ -128,7 +136,7 @@
                   <div class="field-prompt">
                     A couple are reading a book<div class="caret"></div>
                     <div class="img-icon">
-                      <img src="image/Copy.svg" alt="">
+                      <img src="image/image-new/Copy.svg" alt="">
                     </div>
                   </div>
                 </div>
@@ -144,56 +152,98 @@
       <div class="fourth-section">
         <h2>Creation</h2>
         <h4>Turn your photo into a breathtaking AI-generated artwork <br>made for you to bring to life with paint</h4>
-        <h3>Select a picture</h3>
-        <div class="creation-box-container">
-          <div class="creation-box">
-            <span class="creation-name-card">Bring your dream with prompt</span>
-            <div class="description">
-              <div class="one-stroke-description">
-                  <div class="description-icon">
-                    <img src="image/icon keyboard.svg" alt="">
-                  </div>
-                Add a creative prompt
-              </div>
+
+        <!-- Step Indicators -->
+        <div class="stepper">
+          <div class="step" id="step1">1</div>
+          <div class="line" id="line1"></div>
+          <div class="step" id="step2">2</div>
+          <div class="line" id="line1"></div>
+          <div class="step" id="step3">3</div>
+        </div>
+
+        <div id="creationSection" class="creation-section">
+          <div class="main-creation-description">
+            <div class="creation-description">
+              <img src="image/image-new/number_1.svg" alt="">
+              <div class="creation-text">Choose who is in the photo</div>
             </div>
-            <div class="description-button-get-started">Get Started</div>
-            <div class="overlay"></div>
-          </div>
-          <div class="creation-box">
-            <span class="creation-name-card">Bring your dream with prompt</span>
-            <div class="description">
-              <div class="one-stroke-description">
-                <div class="description-icon">
-                  <img src="image/icon photo.svg" alt="">
+            <div class="creation-description">
+              <img src="image/image-new/number_2.svg" alt="">
+              <div class="creation-text">
+                <div class="text-1">
+                  Upload 6 photos
                 </div>
-                Upload your photo
-              </div>
-              <div class="one-stroke-description">
-                  <div class="description-icon">
-                    <img src="image/icon keyboard.svg" alt="">
-                  </div>
-                Add a creative prompt
-              </div>
-            </div>
-            <div class="description-button-get-started">Get Started</div>
-            <div class="overlay"></div>
-          </div>
-          <div class="creation-box">
-            <span class="creation-name-card">Bring your dream with prompt</span>
-            <div class="description">
-              <div class="one-stroke-description">
-                <div class="description-icon">
-                  <img src="image/icon photo.svg" alt="">
+                <div class="text-2">
+                  The object must take up a significant portion of the image to be clearly visible
                 </div>
-                Upload your photo
               </div>
             </div>
-            <div class="description-button-get-started">Get Started</div>
-            <div class="overlay"></div>
+          </div>
+
+          <div class="right-part">
+            <h2 class="section-title">Choose who is in the photo</h2>
+            <div class="dropdown-container">
+              <select id="category-select">
+                <option value="">Who is in the photo ...</option>
+                <option value="cat">Cat</option>
+                <option value="dog">Dog</option>
+                <option value="man">Man</option>
+                <option value="woman">Woman</option>
+                <option value="child">Child</option>
+                <option value="another">Another...</option>
+              </select>
+              <div class="hidden-input" id="custom-input">
+                <input type="text" id="customText" placeholder="Another...">
+              </div>
+            </div>
+
+            <div class="creation-photos">
+              <h2 class="section-title">Upload 6 Photos</h2>
+              <div class="pond-box">
+                <div class="photo-grid" id="photoGrid">
+                  <!-- Photos will appear here -->
+                </div>
+              
+                <!-- Load button -->
+                <div class="upload-btn-wrapper" id="uploadBtnWrapper">
+                  <button type="button" id="customLoadBtn">
+                    <img src="image/image-new/load.svg" alt="Load">
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            
           </div>
         </div>
+
+        <!-- Buttons -->
+        <div class="buttons-creation">
+          <button id="uniqueBackBtn" class="back-btn" style="display:none;">Back</button>
+
+          <!-- <button class="back-btn" onclick="showSection('back')">Back</button> -->
+          <button class="skip-btn" id="skipBtn">Skip</button>
+          <button id="nextBtn" class="next-btn">Next</button>
+        </div>
+
+        <!-- Sections -->
+        <div id="skipSection" style="display:none;">
+          <h2>You chose to Skip</h2>
+          <p>This is the Skip section content.</p>
+        </div>
+        <div id="nextSection" style="display:none;">
+          <h2>You chose Next</h2>
+          <p>This is the Next section content.</p>
+        </div>
+
+        <div id="backSection" style="display:none;">
+          <h2>You went Back</h2>
+        </div>
+
       </div>
     </section>
+      
     <footer class="footer">
       <div class="footer-center">
         <div class="footer-container">
@@ -228,6 +278,238 @@
         <p>Registered in England & Wales | Company No. 12345678 | VAT No. GB123456789</p>
       </div>
     </footer>
+   <!-- Scripts -->
+    <!-- Put this script after FilePond is created (best just before </body>) -->
+<script>
+  (function(){
+    function disableFPAnimations(root){
+      root = root || document;
+  
+      // Remove inline <animateTransform> and <animate> inside any SVGs added by FilePond
+      root.querySelectorAll('svg animate, svg animateTransform').forEach(function(anim){
+        try { anim.parentNode && anim.parentNode.removeChild(anim); } catch(e){}
+      });
+  
+      // Hide or neutralize overlay/spinner elements
+      root.querySelectorAll('.filepond--image-preview-overlay, .filepond--image-preview-overlay svg, .filepond--loading-indicator, .filepond--progress-indicator').forEach(function(el){
+        el.style.display = 'none';
+        el.style.animation = 'none';
+        el.style.transform = 'none';
+        el.style.transition = 'none';
+      });
+  
+      // For all preview wrappers & items, clear animation/transform inline styles
+      root.querySelectorAll('.filepond--image-preview-wrapper, .filepond--item, .filepond--item *').forEach(function(el){
+        el.style.animation = 'none';
+        el.style.transition = 'none';
+        el.style.transform = 'none';
+        el.style.webkitAnimation = 'none';
+        el.style.webkitTransition = 'none';
+        el.style.webkitTransform = 'none';
+        el.style.willChange = 'auto';
+      });
+  
+      // Also force the image itself
+      root.querySelectorAll('.filepond--image-preview-wrapper img').forEach(function(img){
+        img.style.animation = 'none';
+        img.style.transition = 'none';
+        img.style.transform = 'none';
+        img.style.webkitTransform = 'none';
+      });
+    }
+  
+    // Run once now
+    disableFPAnimations(document);
+  
+    // If you have a FilePond instance on window.pond, also hook addfile event to re-run after each add
+    if (window.pond && typeof window.pond.on === 'function') {
+      try {
+        window.pond.on('addfile', function(){ setTimeout(function(){ disableFPAnimations(document); }, 0); });
+        window.pond.on('processfile', function(){ setTimeout(function(){ disableFPAnimations(document); }, 0); });
+      } catch(e){}
+    }
+  
+    // MutationObserver to catch future inserted FilePond nodes (works when items are added dynamically)
+    var observer = new MutationObserver(function(mutations){
+      for(var i=0;i<mutations.length;i++){
+        var m = mutations[i];
+        m.addedNodes.forEach(function(node){
+          if(node.nodeType !== 1) return;
+          if(node.matches && (node.matches('.filepond--item') || node.matches('.filepond--image-preview-wrapper') || node.querySelector('.filepond--image-preview-wrapper'))){
+            // small timeout to let FilePond insert internal nodes
+            setTimeout(function(){ disableFPAnimations(node); }, 0);
+          }
+        });
+      }
+    });
+    observer.observe(document.body, { childList:true, subtree:true });
+  
+  })();
+  </script>
+  
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+<script>
+  const categorySelect = document.getElementById('category-select');
+  const customInputDiv = document.getElementById('custom-input');
+  const customText = document.getElementById('customText');
+  const choices = new Choices(categorySelect, { searchEnabled: false, itemSelectText: '' });
+  
+  const backBtn = document.getElementById("uniqueBackBtn");
+  const skipBtn = document.getElementById('skipBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  
+  const step1 = document.getElementById('step1');
+  const step2 = document.getElementById('step2');
+  const step3 = document.getElementById('step3');
+  
+  let currentSection = 1; // стартовый шаг
+  
+  function updateBackBtn() {
+    backBtn.style.display = currentSection > 1 ? "inline-block" : "none";
+  }
+  
+  function updateStepper() {
+    [step1, step2, step3].forEach(s => s.classList.remove('active', 'completed'));
+    if(currentSection === 1){
+      step1.classList.add('active');
+    } else if(currentSection === 2){
+      step1.classList.add('completed');
+      step2.classList.add('active');
+    } else if(currentSection === 3){
+      step1.classList.add('completed');
+      step2.classList.add('completed');
+      step3.classList.add('active');
+    }
+  }
+  
+  // Показ нужной секции
+  function showSection(choice) {
+    if(choice === 'skip' || choice === 'next') {
+      currentSection = 2;
+      document.getElementById('skipSection').style.display = 'block';
+      document.getElementById('creationSection').style.display = 'none';
+    } else if(choice === 'back') {
+      currentSection = 1;
+      document.getElementById('creationSection').style.display = 'flex';
+      document.getElementById('skipSection').style.display = 'none';
+    }
+  
+    updateBackBtn();
+    updateStepper();
+  }
+  
+  // События кнопок
+  backBtn.addEventListener('click', ()=> showSection('back'));
+  skipBtn.addEventListener('click', ()=> showSection('skip'));
+  nextBtn.addEventListener('click', ()=>{
+    if(nextBtn.classList.contains('active')) showSection('next');
+  });
+  
+ 
+  
+  // Dropdown (custom input for "another")
+categorySelect.addEventListener('change', function() {
+  if (this.value === 'another') {
+    customInputDiv.style.display = 'block';
+    customText.focus();
+  } else {
+    customInputDiv.style.display = 'none';
+    customText.value = '';
+  }
+  checkFormCompletion(); // проверяем форму при выборе категории
+});
+
+// 🔑 Проверка ввода в поле "another" для обновления состояния кнопки Next
+customText.addEventListener('input', () => {
+  checkFormCompletion(); // проверяем форму при каждом вводе текста
+});
+
+  // PHOTO GRID SETUP
+  const photoGrid = document.getElementById("photoGrid");
+  const uploadBtnWrapper = document.getElementById("uploadBtnWrapper");
+  const customLoadBtn = document.getElementById("customLoadBtn");
+  const MAX_PHOTOS = 6;
+  
+  customLoadBtn.addEventListener("click", () => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "image/*";
+    input.multiple = true;
+    input.click();
+  
+    input.onchange = () => {
+      const files = Array.from(input.files);
+      files.forEach(file => {
+        if (photoGrid.children.length >= MAX_PHOTOS) return;
+  
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const item = document.createElement("div");
+          item.className = "item";
+  
+          const wrapper = document.createElement("div");
+          wrapper.className = "photo-wrapper";
+  
+          const img = document.createElement("img");
+          img.src = e.target.result;
+          wrapper.appendChild(img);
+          item.appendChild(wrapper);
+  
+          const delBtn = document.createElement("div");
+          delBtn.className = "delete-btn";
+          delBtn.innerHTML = "&times;";
+          delBtn.addEventListener("click", () => {
+            photoGrid.removeChild(item);
+            toggleUploadBtn();
+            checkFormCompletion();
+          });
+          item.appendChild(delBtn);
+  
+          photoGrid.appendChild(item);
+          toggleUploadBtn();
+          checkFormCompletion();
+        };
+        reader.readAsDataURL(file);
+      });
+    };
+  });
+  
+  function toggleUploadBtn() {
+    if (photoGrid.children.length >= MAX_PHOTOS) {
+      uploadBtnWrapper.style.display = "none";
+    } else {
+      uploadBtnWrapper.style.display = "flex";
+    }
+  }
+  
+  // Проверка формы: категория выбрана + 6 фото
+  function checkFormCompletion() {
+    const categoryFilled = categorySelect.value !== "" && (categorySelect.value !== "another" || customText.value.trim() !== "");
+    const photosFilled = photoGrid.children.length === MAX_PHOTOS;
+  
+    if(categoryFilled && photosFilled) {
+      nextBtn.classList.add("active");
+      nextBtn.disabled = false;
+    } else {
+      nextBtn.classList.remove("active");
+      nextBtn.disabled = true;
+    }
+  }
+  
+  // INIT
+  toggleUploadBtn();
+  checkFormCompletion();
+  updateBackBtn();
+  updateStepper();
+  </script>
+  
+     
+   
+
+
     <!-- For menu -->
     <script>
       const toggleBtn = document.querySelector('.toggle_btn');
@@ -287,5 +569,7 @@
 
     });
   </script>
+  <link href="your_custom.css" rel="stylesheet">
+
 </body>
 </html>

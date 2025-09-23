@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Upload 3x2</title>
+
+<!-- FilePond стили -->
+<link href="https://unpkg.com/filepond/dist/filepond.min.css" rel="stylesheet">
+<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css" rel="stylesheet">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Контейнер FilePond */
+.pond-box {
+  border: 2px solid #aaa;
+  border-radius: 12px;
+  background: white;
+  width: 100%;
+  max-width: 540px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Сетка 3x2 адаптивная */
+.filepond--list.filepond--list {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 15px;
+  list-style-type: none;
+  width: 100%;
+}
+
+/* Каждый элемент — квадрат, масштабируемый */
+.filepond--item {
+  width: 100% !important;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative !important;
+  margin: 0 !important;
+}
+
+/* Контейнер превью */
+.filepond--image-preview-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #fff !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+/* Фото полностью видно */
+.filepond--image-preview canvas,
+.filepond--image-preview img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+/* Отключаем все анимации */
+.filepond--image-preview-wrapper,
+.filepond--image-preview-overlay,
+.filepond--item,
+.filepond--item * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  -webkit-animation: none !important;
+  -webkit-transition: none !important;
+  -webkit-transform: none !important;
+  will-change: auto !important;
+}
+svg animate,
+svg animateTransform {
+  display: none !important;
+}
+</style>
+</head>
+<body>
+
+<div class="pond-box">
+  <input type="file" class="filepond" name="photos" multiple accept="image/*" />
+</div>
+
+<!-- Скрипты FilePond -->
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+<script>
+FilePond.registerPlugin(FilePondPluginImagePreview);
+FilePond.create(document.querySelector('.filepond'), {
+  allowMultiple: true,
+  maxFiles: 6,
+  labelIdle: '<button type="button" class="filepond-load-btn">Load</button>'
+});
+</script>
+
+</body>
+</html>
